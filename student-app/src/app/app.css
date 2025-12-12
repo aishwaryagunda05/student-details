@@ -1,0 +1,26 @@
+.layout{
+    display:flex;
+    height:100vh;
+}
+.sidebar
+{
+    width:220px;
+    background: #222;
+    color: white;
+    padding:20px;
+}
+.sidebar a{
+    display: block;
+    color:white;
+    padding : 10px;
+    font-size:18px;
+}
+.sidebar a:hover {
+  color: rgba(208, 255, 0, 0.279);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background: #f8f8f8;
+}

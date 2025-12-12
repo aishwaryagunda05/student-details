@@ -1,0 +1,97 @@
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.info {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.form-container
+{
+    width:600px;
+    margin : 30px auto;
+    padding:25px;
+    background:rgba(255, 187, 0, 0.36);
+    border-radius: 5px;
+}
+h2{
+    font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  text-align: center;
+}
+label{
+    font-weight: 500;
+      margin-bottom: 6px;
+}
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  width: 200px;
+  background: #5acbff55;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+button:hover {
+  background: #2cd1ff4b;
+}
+
+/* Error Message */
+.error p {
+  color: red;
+  font-size: 12px;
+  margin: 3px 0;
+}
+
+/* Info messages */
+.info {
+  background: #fff7d1;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #665200;
+  border-left: 4px solid #ffd95a;
+}
+
+.radio-group {
+  margin: 10px 0;
+}
+
+.radio-group label {
+  margin-right: 15px;  
+  font-size: 14px;
+}
+
+.checkbox-group {
+  margin: 10px 0;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+}

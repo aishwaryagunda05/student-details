@@ -1,0 +1,10 @@
+<h2>Student Details</h2>
+<div class="students-container">
+    <div class="student-card" *ngFor="let s of students">
+        <h3>{{s.name}}</h3>
+        <p><strong>Class:</strong>{{s.className}}</p>
+         <p><strong>Gender:</strong>{{s.gender}}</p>
+          <p><strong>Hobby:</strong>{{s.hobby}}</p>
+           <p><strong>Favourite Subject:</strong>{{s.favouriteSubject}}</p>
+    </div>
+</div>

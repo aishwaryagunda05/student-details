@@ -1,0 +1,64 @@
+<h2>Add New Student</h2>
+<div class="form-container">
+<form [formGroup]="studentForm" (ngSubmit)="save()">
+    <div>
+        <label>Name:</label>
+        <input type="text" formControlName="name" />
+        <div class="error" *ngIf="f['name'].touched && f['name'].invalid">
+         <p *ngIf="f['name'].errors?.['required']">Name is required</p>
+         <p *ngIf="f['name'].errors?.['minlength']">Minimum 5 characters required</p>
+        </div>
+    </div>
+    <div>
+        <label>Class:</label>
+        <select formControlName="className">
+            <option value="" disabled>Select Class</option>
+            <option value="Class 6">Class 6</option>
+            <option value="Class 7">Class 7</option>
+            <option value="Class 8">Class 8</option>
+            <option value="Class 9">Class 9</option>
+        </select>
+        <div *ngIf="f['className'].value === 'Class 9'">
+      <p class="info">You will appear in board exams soon. All the Best !!</p>
+    </div>
+    <div *ngIf="f['className'].value === 'Class 6'">
+    <p class="info">Welcome to middle school!!</p>
+</div>
+        
+<div *ngIf="f['className'].value &&  f['className'].value !== 'Class 6' &&
+      f['className'].value !== 'Class 9' ">
+    <p class="info">Education and hobby go hand in hand!</p>
+    </div>
+    </div>
+    <div class="radio-group">
+        <label>Gender:</label>
+        <input type="radio" value="Male" formControlName="gender"/>Male
+         <input type="radio" value="Female" formControlName="gender"/>Female
+         <div class="error" *ngIf="f['gender'].touched && f['gender'].invalid">
+            <p>Gender should be must</p>
+         </div>
+
+    </div>
+     <div class="checkbox-group">
+    <input type="checkbox" formControlName="hasHobby" /> I have a hobby
+  </div>
+  <div *ngIf="f['hasHobby'].value">
+    <label>Hobby:</label>
+    <input type="text" formControlName="hobby" />
+  </div>
+   <div>
+    <label>Favourite Subject:</label>
+    <select formControlName="favouriteSubject">
+      <option value="">Select</option>
+      <option>Maths</option>
+      <option>Science</option>
+      <option>English</option>
+      <option>Social</option>
+      <option>Computer</option>
+    </select>
+  </div>
+
+  <button type="submit">Save</button>
+
+</form>
+</div>
